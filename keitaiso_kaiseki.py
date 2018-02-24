@@ -9,7 +9,7 @@ import pandas as pd
 fp = open("sakaguchi_sakura.txt") #坂口安吾『桜の森の満開の下』（１９４７）、青空文庫<http://www.aozora.gr.jp/cards/001095/files/42618_21410.html>
 doc = fp.read()
 
-nm = MeCab("-Ochasen") #茶筅形式に出力フォーマットを変更
+nm = MeCab("-Ochasen") #茶筅形式に出力フォーマットを変更。MeCab.Tagger("-Ochasen")だと自分の環境では動かなかった。
 
 list_keitaiso = [i.split() for i in nm.parse(doc).splitlines()]
 
